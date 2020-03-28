@@ -1,0 +1,11 @@
+version: '3.4'
+
+services:
+  haxball: ox1de/haxball
+    image: 
+    network_mode: "host"
+    environment:
+      - ROOMNAME=SET_ROOM_NAME
+      - BOTNAME=SET_BOT_NAME
+      - TOKEN=SET_TOKEN # Visit https://www.haxball.com/rs/api/getheadlesstoken
+      - ADMINPASS=SET_PASSWORD
