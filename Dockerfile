@@ -1,7 +1,5 @@
 FROM ubuntu:18.04
 
-ENTRYPOINT ["/init"]
-
 RUN UBUNTU_FRONTEND=noninteractive \
   apt-get update && \
   apt-get -y install \
