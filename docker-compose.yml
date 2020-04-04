@@ -7,5 +7,5 @@ services:
     environment:
       - ROOMNAME=SET_ROOM_NAME
       - BOTNAME=SET_BOT_NAME
-      - TOKEN=SET_TOKEN # Visit https://www.haxball.com/rs/api/getheadlesstoken
+      - TOKEN=SET_TOKEN # Visit https://www.haxball.com/headlesstoken
       - ADMINPASS=SET_PASSWORD

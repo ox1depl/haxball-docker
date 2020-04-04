@@ -1,14 +1,17 @@
 FROM ubuntu:18.04
-# Install npm
+
+ENTRYPOINT ["/init"]
+
 RUN UBUNTU_FRONTEND=noninteractive \
   apt-get update && \
   apt-get -y install \
     npm
-# Install haxroomie dependencies
+
 RUN npm install haxroomie -g
-# Install chrome
+
 RUN UBUNTU_FRONTEND=noninteractive \
   apt-get -y install \
+    curl \
     screen \
     gconf-service \
     libasound2 \
@@ -49,5 +52,9 @@ RUN UBUNTU_FRONTEND=noninteractive \
     wget \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
-COPY bootstrap.sh /root/bootstrap.sh
-CMD ["/root/bootstrap.sh"]
+
+COPY root/ /
+
+CMD ["/bootstrap.sh"]
+
+HEALTHCHECK --interval=5s --timeout=2s --retries=20 CMD /healthcheck.sh || exit 1
