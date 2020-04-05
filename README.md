@@ -1,6 +1,18 @@
 # Haxball - Headless Host - docker
 
-![Docker Cloud Automated build](https://img.shields.io/docker/cloud/automated/ox1de/haxball) ![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/ox1de/haxball)
+<p align="left">
+<a href="https://hub.docker.com/r/ox1de/haxball">
+        <img src="https://img.shields.io/badge/Docker%20HUB-haxball-yellow?style=for-the-badge&logo=docker"
+            alt="Docker Cloud Image Repo"></a>
+
+<a href="https://hub.docker.com/r/ox1de/haxball/builds">
+        <img src="https://img.shields.io/docker/cloud/automated/ox1de/haxball?style=for-the-badge&logo=docker"
+            alt="Docker Cloud Automated build"></a>
+
+<a href="https://hub.docker.com/r/ox1de/haxball/builds">
+        <img src="https://img.shields.io/docker/cloud/build/ox1de/haxball?style=for-the-badge&logo=docker"
+            alt="Docker Cloud Build Status"></a>
+</br></br></p>
 
 This is a simple container that creates a permanent room in the haxball game. Based on the HaxBall Headless Host and Haxroomie tool which you can find at this link https://github.com/morko/haxroomie
 
