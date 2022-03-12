@@ -1,11 +1,11 @@
 FROM ubuntu:18.04
 
-RUN UBUNTU_FRONTEND=noninteractive \
-  apt-get update && \
-  apt-get -y install \
-    npm
+ENV DEBIAN_FRONTEND=noninteractive
+ENV TZ=Europe/Warsaw
 
-RUN npm install haxroomie -g
+RUN apt-get update && apt-get -y install curl && curl -sL https://deb.nodesource.com/setup_16.x -o nodesource_setup.sh && bash nodesource_setup.sh && apt install -y nodejs
+RUN apt-get install -y chromium-browser
+RUN npm install -g haxroomie-cli
 
 RUN UBUNTU_FRONTEND=noninteractive \
   apt-get -y install \
@@ -53,6 +53,7 @@ RUN UBUNTU_FRONTEND=noninteractive \
 
 COPY root/ /
 
-CMD ["/bootstrap.sh"]
+CMD ["./bootstrap.sh"]
+#CMD ["tail","-f","/dev/null"]
 
-HEALTHCHECK --interval=5s --timeout=2s --retries=20 CMD /healthcheck.sh || exit 1
+#HEALTHCHECK --interval=5s --timeout=2s --retries=20 CMD /healthcheck.sh || exit 1

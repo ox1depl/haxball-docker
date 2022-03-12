@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "Starting haxball container.."
+
 ### Delete default config file
 configdir=/root/.haxroomie
 config=config.js
@@ -59,4 +61,5 @@ let config = {
 module.exports = config;
 EOF
 
-haxroomie
+echo "Launching haxroomie-cli..."
+haxroomie-cli --no-sandbox --config /root/.haxroomie/config.js
