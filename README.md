@@ -53,6 +53,8 @@ services:
   haxball: 
     image: ox1de/haxball
     network_mode: "host"
+    stdin_open: true
+    tty: true
     environment:
       - ROOMNAME=SET_ROOM_NAME
       - BOTNAME=SET_BOT_NAME
