@@ -7,7 +7,7 @@ services:
     stdin_open: true
     tty: true
     environment:
-      - ROOMNAME=PiwikPRO
-      - BOTNAME=PiwikBot
-      - TOKEN=thr1.AAAAAGIskgAncBPA2yUPDg.sYMrmPQha8c # Visit https://www.haxball.com/headlesstoken
-      - ADMINPASS=Secret123
+      - ROOMNAME=SET_ROOM_NAME
+      - BOTNAME==SET_BOT_NAME
+      - TOKEN=SET_TOKEN # Visit https://www.haxball.com/headlesstoken
+      - ADMINPASS=SET_PASSWORD

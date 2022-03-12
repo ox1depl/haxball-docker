@@ -51,7 +51,7 @@ version: '3.4'
 
 services:
   haxball: 
-    image: ox1de/haxball 
+    image: ox1de/haxball
     network_mode: "host"
     environment:
       - ROOMNAME=SET_ROOM_NAME
