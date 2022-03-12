@@ -2,12 +2,12 @@ version: '3.4'
 
 services:
   haxball:
-    image: jzyinq/haxball:test
+    image: ox1de/haxball
     network_mode: "host"
     stdin_open: true
     tty: true
     environment:
       - ROOMNAME=SET_ROOM_NAME
-      - BOTNAME==SET_BOT_NAME
+      - BOTNAME=SET_BOT_NAME
       - TOKEN=SET_TOKEN # Visit https://www.haxball.com/headlesstoken
       - ADMINPASS=SET_PASSWORD
