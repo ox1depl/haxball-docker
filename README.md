@@ -50,9 +50,11 @@ Create simple file `docker-compose.yml` and fill it.
 version: '3.4'
 
 services:
-  haxball: ox1de/haxball
-    image: 
+  haxball: 
+    image: ox1de/haxball
     network_mode: "host"
+    stdin_open: true
+    tty: true
     environment:
       - ROOMNAME=SET_ROOM_NAME
       - BOTNAME=SET_BOT_NAME
